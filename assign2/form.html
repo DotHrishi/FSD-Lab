@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="validate.js"></script>
+</head>
+
+<body>
+    <h1>Admission Form</h1>
+
+    <form onsubmit="return submitt()">
+
+        <label>Name:</label><br>
+        <input type="text" id="name"><br><br>
+
+        <label>Email:</label><br>
+        <input type="email" id="email"><br><br>
+
+        <label>Course:</label><br>
+        <select id="course">
+            <option value="">Select course</option>
+            <option value="computer_science">Computer Science</option>
+            <option value="information_technology">Information Technology</option>
+            <option value="software_engineering">Software Engineering</option>
+            <option value="computer_networks">Computer Networks</option>
+        </select><br><br>
+
+        <label>Age:</label><br>
+        <input type="number" id="age" min="0"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
