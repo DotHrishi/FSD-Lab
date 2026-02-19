@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
         greetingText = "Good Evening, I'm";
     }
-    
+
     // Only update if it was strictly "Hello, I'm" to avoid overwriting if manually changed, 
     // but here we want the dynamic effect so we just set it.
     greetingElement.textContent = greetingText;
