@@ -349,6 +349,7 @@ footer {
 
     .hamburger.active .bar:nth-child(2) {
         opacity: 0;
+        transform: scale(0);
     }
 
     .hamburger.active .bar:nth-child(1) {
@@ -392,4 +393,126 @@ footer {
     .about-container {
         grid-template-columns: 1fr;
     }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(10, 25, 47, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+    border: 1px solid var(--primary-color);
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.close-btn:hover {
+    color: var(--primary-color);
+}
+
+.modal h2 {
+    color: var(--heading-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--heading-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-family: var(--font-main);
+    font-size: 1rem;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(100, 255, 218, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group .error-msg {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+    border-color: #ff6b6b;
+}
+
+.form-group.error .error-msg {
+    visibility: visible;
+}
+
+.form-group.success input,
+.form-group.success textarea {
+    border-color: var(--primary-color);
 }
