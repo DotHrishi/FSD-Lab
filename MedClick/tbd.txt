@@ -1,0 +1,41 @@
+
+//ui- better cards showing all details etc. gg. 
+//need to add form validations alert messages etc.
+
+
+
+UX
+//sign in while its signing in-loading screen.
+//sign in failed.-screen message.
+//sign in- email already exists
+//login loading screen while loggin gin.
+//all loading screens
+
+//logout-delete session
+
+
+Issues
+1) If u put at 10:45am for tmrw mroning at night 9pm ,It wont show so create a seperate section called all meds added for all-
+ in that section only u can delete update etc also
+2) Scenario
+
+Login on PC → token A stored
+
+Login on Phone → token B stored (overwrites A)
+
+Result:
+
+Only the last logged-in device receives notifications
+
+<<<<<<< HEAD
+The other device becomes silent
+
+
+3) need vercel.json 
+For ANY path requested ( /dashboard, /clubs, /profile ), always send index.html.
+=======
+
+The other device becomes silent
+
+3) delete med after the set dose date.
+>>>>>>> 461c21fd1c4d0aea92c6a86b52a197fc98ebdc00
